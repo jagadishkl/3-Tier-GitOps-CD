@@ -1,0 +1,29 @@
+
+---
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  
+  vars_files: 
+    - var.yml
+      
+  tasks:
+    - include_role:
+        name: OME_discovery
+      tags:
+        - discovery
+        
+    - include_role:
+        name: OME_template
+      tags:
+        - deploy_template
+                
+    - include_role:
+        name: idrac_os_deployment
+      tags:
+        - network_iso
+        
+        
+    
+
+        

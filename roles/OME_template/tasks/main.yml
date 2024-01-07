@@ -1,0 +1,22 @@
+
+---
+- name: Deploy Template
+  block:
+    - name: Deploy template on one or multiple devices.
+      dellemc.openmanage.ome_template:
+        hostname: "{{ ome_hostname }}"
+        username: "{{ ome_username }}"
+        password: "{{ ome_password }}"
+        validate_certs: False
+        command: "deploy"
+        template_name: "{{ template_name }}"
+        device_service_tag:
+          - "{{ device_service_tag }}"
+      register: deploy_template    
+
+  rescue:
+      - debug:
+          msg: "{{ deploy_template }}"
+  tags:
+        - deploy_template
+

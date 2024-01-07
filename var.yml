@@ -1,0 +1,36 @@
+
+
+---
+############## OME Details ##############
+
+ome_hostname: ""
+ome_username: ""
+ome_password: ""
+
+
+############## Discover Jobs Idrac-details ##############
+
+# network ip range 
+#  var_ip_range: ""
+
+############## Deploy Template ##############
+
+template_name: ""
+device_service_tag: ""
+# device_id: ""
+
+############## IDRAC Details - OS Provisioning ##############
+
+
+idrac_details:
+
+- { idrac_ip: '10.222.181.204', idrac_user: '', idrac_password: '' }
+- { idrac_ip: '10.222.181.206', idrac_user: '', idrac_password: '' }
+- { idrac_ip: '10.222.181.208', idrac_user: '', idrac_password: '' }
+- { idrac_ip: '10.222.181.220', idrac_user: '', idrac_password: '' }
+- { idrac_ip: '10.222.181.222', idrac_user: '', idrac_password: '' }
+- { idrac_ip: '10.222.181.224', idrac_user: '', idrac_password: '' }
+
+iso_path: "10.222.153.165:/home/iso/"
+iso_name: "rhel-8.4-x86_64-dvd.iso"
+

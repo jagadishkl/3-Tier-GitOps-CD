@@ -1,0 +1,26 @@
+
+---
+- name: Create Discover Jobs
+  block:
+    - name: Create Discover Jobs
+      dellemc.openmanage.ome_discovery:
+        hostname: "{{ ome_hostname }}"
+        username: "{{ ome_username }}"
+        password: "{{ ome_password }}"
+        validate_certs: false
+        discovery_job_name: "discovery_job"
+        discovery_config_targets:
+          - network_address_detail:
+              - "{{ var_ip_range }}"
+            device_types:
+              - "SERVER"
+            wsman:
+              username: "{{ idrac_user }}"
+              password: "{{ idrac_password }}"
+      register: discovery_job
+           
+  rescue:
+    - debug:
+        msg: "Job Discovery failed"
+  tags:
+        - discovery
