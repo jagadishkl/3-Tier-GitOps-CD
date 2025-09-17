@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: kljagadish/backend:694535bf15cb7328bd153687abca4167a3fd083a
+          image: kljagadish/backend:e92a6bdff9723c9f602c9730bfea6b8fbbfeb493
           ports:
             - containerPort: 5000
           env:
