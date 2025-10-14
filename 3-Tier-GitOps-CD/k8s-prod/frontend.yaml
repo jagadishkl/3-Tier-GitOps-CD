@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: kljagadish/frontend:e92a6bdff9723c9f602c9730bfea6b8fbbfeb493
+          image: kljagadish/frontend:eb512b9d9f8cf80cb1a7ae1e090de04fbc6a729c
           ports:
             - containerPort: 80
 ---
